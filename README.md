@@ -5,6 +5,8 @@ It ends with: **(a)** a short note about future phases + a placeholder for a **P
 ***
 
 # ROI Newsletter Agent (ROI‑Pilot) — How It Works
+<img width="1546" height="990" alt="image" src="https://github.com/user-attachments/assets/62c3213b-ec47-47b3-8598-5da7bcc4d5c1" />
+
 
 ## Purpose (What and Why)
 
