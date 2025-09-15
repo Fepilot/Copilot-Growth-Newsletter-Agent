@@ -79,10 +79,10 @@ It removes the manual burden of **collecting inputs** and **formatting** the ema
 
 ## Bi-Weekly Runbook (Phase 1 – Current)
 
-1.  **Update Excel** in Sharepoint on this [SHEET]([url](https://microsoft.sharepoint-df.com/:x:/t/CopilotROIandOrgAdvisors/ESwtoQo7TVxKrelpQMt7lSMB_AoxmL1Y5Ygco2ry0QLptw?e=O4bxHo))
+1.  **Update Excel** in Sharepoint on this [SHEET](https://microsoft.sharepoint-df.com/:x:/t/CopilotROIandOrgAdvisors/ESwtoQo7TVxKrelpQMt7lSMB_AoxmL1Y5Ygco2ry0QLptw?e=FqacVD)
     *   Download interactions from **MiX** into **Sheet 1** (table).
     *   Update **Customer Highlights**, **ROI Team Highlights (individual)**, and **Kudos** on Sheets 2–4.
-    *   Update the Team meeting summary one note on the latest section and copy the previous in aother sheet [HERE]([url](https://microsoft.sharepoint-df.com/:o:/t/CopilotROIandOrgAdvisors/ErDG-tFUKlZOm82PBm6wj_QBl1qX0bhuHFek0PL1k8zEug?e=5SW5Ts))
+    *   Update the Team meeting summary one note on the latest section and copy the previous in aother sheet [HERE](https://microsoft.sharepoint-df.com/:o:/t/CopilotROIandOrgAdvisors/ErDG-tFUKlZOm82PBm6wj_QBl1qX0bhuHFek0PL1k8zEug?e=BlGgqP)
 2.  Open the agent → type **“Draft newsletter”**.
 3.  Review the HTML draft in chat.
 4.  **Copy** the HTML → **paste** into Outlook → add recipients → **Send**.
