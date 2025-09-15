@@ -123,6 +123,6 @@ It removes the manual burden of **collecting inputs** and **formatting** the ema
 
 Use our step‑by‑step guide to create the Excel schema, flows, and agent instructions in your tenant.
 
-> **\[Add link to your “How to create the agent step by step” guide here]**
+> **\[Attached above]**
 
 ***
