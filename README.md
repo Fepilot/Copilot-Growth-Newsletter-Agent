@@ -20,11 +20,15 @@ It removes the manual burden of **collecting inputs** and **formatting** the ema
 *   **Inputs**:
     *   **Excel (SharePoint)** with 4 sheets (Engagement summary, Customer Highlights, ROI Team Highlights (individual), Kudos).
     *   **OneNote (SharePoint)** with the **latest ROI team meeting notes**.
+ <img width="781" height="44" alt="image" src="https://github.com/user-attachments/assets/050a9791-8b0a-4c0b-afe2-55fa0500a7e2" />
+
 *   **Action**: You open the agent and type **“Draft newsletter”**.
 *   **Behind the scenes**:
     1.  A flow reads the 4 Excel tables and the OneNote page text.
     2.  The agent rewrites everything in a friendly, professional tone (“ROI‑Pilot”) and builds the newsletter using a predefined **HTML template** (inline CSS tables for Outlook).
 *   **Output**: A **single HTML block** in the chat → **copy & paste into Outlook** → send.
+  <img width="1408" height="1135" alt="image" src="https://github.com/user-attachments/assets/360b88b0-8ace-45e7-b84c-3294f9a3b27c" />
+
 
 ***
 
@@ -73,11 +77,12 @@ It removes the manual burden of **collecting inputs** and **formatting** the ema
 
 ***
 
-## Weekly Runbook (Phase 1 – Current)
+## Bi-Weekly Runbook (Phase 1 – Current)
 
-1.  **Update Excel** in SharePoint:
+1.  **Update Excel** in [SharePoint]([url](https://microsoft.sharepoint-df.com/:x:/t/CopilotROIandOrgAdvisors/ESwtoQo7TVxKrelpQMt7lSMB_AoxmL1Y5Ygco2ry0QLptw?e=O4bxHo)):
     *   Download interactions from **MiX** into **Sheet 1** (table).
     *   Update **Customer Highlights**, **ROI Team Highlights (individual)**, and **Kudos** on Sheets 2–4.
+    *   Update the Team meeting summary one note on the latest section and copy the previous in aother sheet [HERE]([url](https://microsoft.sharepoint-df.com/:o:/t/CopilotROIandOrgAdvisors/ErDG-tFUKlZOm82PBm6wj_QBl1qX0bhuHFek0PL1k8zEug?e=5SW5Ts))
 2.  Open the agent → type **“Draft newsletter”**.
 3.  Review the HTML draft in chat.
 4.  **Copy** the HTML → **paste** into Outlook → add recipients → **Send**.
@@ -105,7 +110,7 @@ It removes the manual burden of **collecting inputs** and **formatting** the ema
 
 ## What’s Next (More Phases Coming)
 
-*   **Phase 2**: Reminder notifications (e.g., **Fridays 09:00**) prompting updates and draft.
+*   **Phase 2**: Reminder notifications (e.g., **Monday's at 09:00**) prompting updates and draft.
 *   **Phase 3**: Employees submit highlights **via the agent** (guided Q\&A → writes to Excel). Optional owner approval → **auto‑send**.
 
 **PowerPoint with the full roadmap and diagrams**:
