@@ -115,7 +115,7 @@ It removes the manual burden of **collecting inputs** and **formatting** the ema
 
 **PowerPoint with the full roadmap and diagrams**:
 
-> **\[Add link to the PowerPoint here]**
+> **\ [PowerPoint HERE](https://microsoft-my.sharepoint.com/:p:/p/fernandobe/EWnqPvFl3aZGqM_lAeyT3lEB1ap5T9oMucuGs2YZXOu-HA?e=NbEUKN)
 
 ***
 
