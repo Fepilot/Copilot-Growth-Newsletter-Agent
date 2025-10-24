@@ -1,128 +1,85 @@
-# Copilot-Growth-Newsletter-Agent
-Below is a **ready-to-paste `README.md` section** focused on **how the agent works**.\
-It ends with: **(a)** a short note about future phases + a placeholder for a **PowerPoint link**, and **(b)** a **“Replicate this agent in your organization”** section with a placeholder link to your step‑by‑step.
+Automating Your Personal Newsletter with Copilot
+Purpose
+This guide explains how to create and automate a personal newsletter using Microsoft Copilot. The newsletter summarizes your recent work highlights—customer engagements, ROI contributions, and kudos—by searching across your communications. It helps you stay organized and share updates with your team effortlessly.
 
-***
+The Prompt
+Replace Fernando Berdugo Manzano with your name in the prompt below:
+You are an AI assistant tasked with creating a personal newsletter for [your name].
+Search across my communications from the last 14 days in Microsoft Teams chats, Outlook emails, meeting transcripts, documents, and MIX if available.
+Extract and summarize the following:
 
-# ROI Newsletter Agent (ROI‑Pilot) — How It Works
-<img width="1546" height="990" alt="image" src="https://github.com/user-attachments/assets/62c3213b-ec47-47b3-8598-5da7bcc4d5c1" />
+1. **Customer Highlights**
+   - Identify mentions of customer names, engagements, deliverables, or success stories.
+   - Include context like project name, outcome, and any metrics or impact shared.
+
+2. **ROI Highlights**
+   - Capture any ROI-related achievements, advisory sessions, or analytics insights I contributed to.
+   - Include references to tools (e.g., Super User Report, Copilot Dashboard) and measurable impact if mentioned.
+
+3. **Kudos**
+   - Find messages or emails where I expressed appreciation or recognition to colleagues.
+   - Include sender, recipient, and reason for kudos.
+
+Format the output as:
+**Customer Highlights:** [bullet list with short summaries]
+**ROI Highlights:** [bullet list with short summaries]
+**Kudos:** [bullet list with From → To → Message]
+
+Rules:
+- Ignore duplicates and irrelevant chatter.
+- Prioritize actionable insights and positive outcomes.
+- Keep each bullet concise (max 20 words).
+- If no data found for a section, write “No updates for this category.”
+
+Input Variables:
+- DateRange = Last 14 days
+- Sources = Teams, Outlook, Transcripts, Documents, MIX
 
 
-## Purpose (What and Why)
-
-**ROI‑Pilot** is a Copilot Studio agent that turns our weekly updates into a polished, **Outlook‑ready HTML newsletter** with one simple prompt.\
-It removes the manual burden of **collecting inputs** and **formatting** the email, maintaining a consistent, friendly, and positive editorial voice.
-
-***
-
-## How It Works — At a Glance
-
-*   **Inputs**:
-    *   **Excel (SharePoint)** with 4 sheets (Engagement summary, Customer Highlights, ROI Team Highlights (individual), Kudos).
-    *   **OneNote (SharePoint)** with the **latest ROI team meeting notes**.
- <img width="781" height="44" alt="image" src="https://github.com/user-attachments/assets/050a9791-8b0a-4c0b-afe2-55fa0500a7e2" />
-
-*   **Action**: You open the agent and type **“Draft newsletter”**.
-*   **Behind the scenes**:
-    1.  A flow reads the 4 Excel tables and the OneNote page text.
-    2.  The agent rewrites everything in a friendly, professional tone (“ROI‑Pilot”) and builds the newsletter using a predefined **HTML template** (inline CSS tables for Outlook).
-*   **Output**: A **single HTML block** in the chat → **copy & paste into Outlook** → send.
-  <img width="1408" height="1135" alt="image" src="https://github.com/user-attachments/assets/360b88b0-8ace-45e7-b84c-3294f9a3b27c" />
+How to Automate It
+You can schedule this prompt to run automatically every two weeks (every 15 days) using Copilot Automate Prompt:
+Step-by-Step
 
 
-***
+Open Copilot Automate Prompt
 
-## Data Sources and Structure
-
-### Excel (SharePoint)
-
-*   **Sheet 1 — Engagement summary** (`TblEngagementSummary`)\
-    `Category | Count | Notes` (rows: Active, Completed, Won, Pending)
-*   **Sheet 2 — Customer Highlights** (`TblCustomerHighlights`)\
-    `Customer name | Licences total | Deliverable | Team member`
-*   **Sheet 3 — ROI teams Highlights** (`TblROIHighlights`)\
-    `Name | Highlights`
-*   **Sheet 4 — Kudos** (`TblKudos`)\
-    `From | To | Message`
-
-> **Weekly reset**: After sending the newsletter, we clear the tables for the next cycle.
-
-### OneNote (SharePoint)
-
-*   Latest page in the **ROI Team Weekly** section contains last week’s **team meeting notes**.
-*   The agent uses this to produce:
-    *   **The most important update**
-    *   **Team highlights narrative**
-
-***
-
-## Processing Logic (What the Agent Does)
-
-1.  **Fetch**
-    *   Calls a Power Automate **agent flow** to read:
-        *   All rows from the 4 Excel tables.
-        *   The latest OneNote page (converted to text).
-2.  **Rewrite**
-    *   Summarizes and rewrites in the voice of **ROI‑Pilot**: friendly, enthusiastic, positive, slightly humorous.
-3.  **Format**
-    *   Builds a single **HTML newsletter** with:
-        *   **Engagement Summary** table (counts + one quick insight).
-        *   **Customer Highlights** table (Customer, Licences, Deliverable, Team Member + short comment).
-        *   **Team Highlights** from OneNote.
-        *   **Individual Highlights** as a list.
-        *   **Kudos** as a list.
-    *   Uses **inline CSS** for Outlook compatibility.
-4.  **Return**
-    *   Displays the **HTML** in chat so you can **copy & paste** directly into Outlook.
-
-***
-
-## Bi-Weekly Runbook (Phase 1 – Current)
-
-1.  **Update Excel** in Sharepoint on this [SHEET](https://microsoft.sharepoint-df.com/:x:/t/CopilotROIandOrgAdvisors/ESwtoQo7TVxKrelpQMt7lSMB_AoxmL1Y5Ygco2ry0QLptw?e=FqacVD)
-    *   Download interactions from **MiX** into **Sheet 1** (table).
-    *   Update **Customer Highlights**, **ROI Team Highlights (individual)**, and **Kudos** on Sheets 2–4.
-    *   Update the Team meeting summary one note on the latest section and copy the previous in aother sheet [HERE](https://microsoft.sharepoint-df.com/:o:/t/CopilotROIandOrgAdvisors/ErDG-tFUKlZOm82PBm6wj_QBl1qX0bhuHFek0PL1k8zEug?e=BlGgqP)
-2.  Open the agent → type **“Draft newsletter”**.
-3.  Review the HTML draft in chat.
-4.  **Copy** the HTML → **paste** into Outlook → add recipients → **Send**.
-5.  **Clear** Excel tables for next week.
+Go to your Copilot dashboard and select Automate Prompt.
 
 
 
-***
+Create a New Automation
 
-## Roles
+Click New Automation and paste the prompt above into the Prompt field.
 
-*   **Weekly Owner**: Updates Excel, runs **Draft**, reviews, sends, clears tables.
-*   **Contributors**: Provide highlights/kudos via Excel (Phase 1).
-*   **Agent Owner**: Maintains the agent instructions, flows, and Excel template.
 
-***
 
-## Guardrails & Notes
+Set Input Variables
 
-*   If a section has no data, the agent inserts a friendly placeholder (e.g., *“No updates this week—keep the momentum!”*).
-*   Output is **HTML only** (email‑safe, inline styles).
-*   The agent **does not auto‑send** in Phase 1; you stay in control.
+DateRange: Last 14 days
+Sources: Teams, Outlook, Transcripts, Documents, MIX
 
-***
 
-## What’s Next (More Phases Coming)
 
-*   **Phase 2**: Reminder notifications (e.g., **Monday's at 09:00**) prompting updates and draft.
-*   **Phase 3**: Employees submit highlights **via the agent** (guided Q\&A → writes to Excel). Optional owner approval → **auto‑send**.
+Configure Recurrence
 
-**PowerPoint with the full roadmap and diagrams**:
+Choose Frequency: Every 15 days
+Select Start Date: Next Friday
+Time: Pick a convenient hour (e.g., 9:00 AM).
 
-> **\ [PowerPoint HERE](https://microsoft-my.sharepoint.com/:p:/p/fernandobe/EWnqPvFl3aZGqM_lAeyT3lEB1ap5T9oMucuGs2YZXOu-HA?e=NbEUKN)
 
-***
 
-## Replicate This Agent in Your Organization
+Output Destination
 
-Use our step‑by‑step guide to create the Excel schema, flows, and agent instructions in your tenant.
+Choose where the newsletter should appear:
 
-> **\[Attached above]**
+Email (send to yourself or your team)
+OneNote (shared section for team contributions)
+Word file in SharePoint (for collaborative editing)
 
-***
+
+
+
+
+Save and Activate
+
+Click Save and Activate. Copilot will now run this prompt automatically every two weeks.
